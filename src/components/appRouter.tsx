@@ -9,6 +9,7 @@ import Dashboard from "../pages/dashboardcomponent";
 
 import New from "../pages/new";
 import { Component } from 'react';
+import ActivityLog from "../pages/activity";
 
 
 const AppRouter: React.FC = () => {
@@ -21,6 +22,7 @@ const AppRouter: React.FC = () => {
          <Route exact path="/" component={Login} />
   <Route exact path="/register" component={Register}/>     
   <Route path="/dash" component={Dashboard} />
+  <Route exact path="/activity" component={ActivityLog} />
   
   <Route
     path="/dash"
