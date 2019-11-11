@@ -5,6 +5,7 @@ import App from "../App";
 import Login from '../pages/logincomponent'
 import Register from "../pages/registercomponent";
 import Dashboard from "../pages/dashboardcomponent";
+import WorkspaceSetting from "../pages/workspacesetting";
 
 
 
@@ -15,8 +16,13 @@ const AppRouter: React.FC = () => {
   return (
     <Router>
       <App>  
-   
+  
+     
+
   <Route exact path="/" component={Login} />
+
+      <Route exact path="/settings" component={WorkspaceSetting} />
+
   <Route exact path="/register" component={Register}/>     
   <Route path="/dash" component={Dashboard} />
   
