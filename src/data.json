@@ -1,0 +1,47 @@
+{
+    "timesheet": [{
+        "id": 3,
+        "projectId": 1,
+        "timeWorked": 70,
+        "date": "2019-10-07",
+        "note": "Doing work on design part."
+    }],
+    "project": [{
+        "id": 1,
+        "name": "AT&T Project",
+        "projectColor": "#f2f3f4",
+        "clientId": 1,
+        "members": {
+            "name": "ModiModi",
+            "hourlyrate": "40"
+        },
+        "phases": [1, 2, 3, 4],
+        "budget": {
+            "hours": 12,
+            "recurrence": "weekly",
+            "dayOfWeek": "Monday"
+        }
+
+    }],
+    "phases": [{
+            "name": "design",
+            "id": 1
+        },
+        {
+            "name": "development",
+            "id": 2
+        },
+        {
+            "name": "Testing",
+            "id": 3
+        }
+    ],
+    "clients": [{
+        "id": 1,
+        "name": "AT&T",
+        "color": "#f2f3f4",
+        "noOfProjects": 1
+
+    }]
+
+}

@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ #search{
+  width: 200px;
+  height: 25px;
+  
+}/*
+#newproject{
+  color: #00ff00;
+} */
+/* #searchbox{
+  column-count: 5;
+  column-gap: 350px;
+} */
