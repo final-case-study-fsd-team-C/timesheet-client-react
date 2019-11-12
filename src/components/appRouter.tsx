@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import App from "../App";
 import Client from '../pages/client';
+import Phase from '../pages/phase';
 import Login from '../pages/logincomponent';
 import Register from "../pages/registercomponent";
 import Dashboard from "../pages/dashboardcomponent";
@@ -22,6 +23,7 @@ const AppRouter: React.FC = () => {
   <Route exact path="/register" component={Register}/>     
   <Route path="/dash" component={Dashboard} />
   <Route exact path="/clients" component={Client} />
+  <Route exact path="/phase" component={Phase} />
   
   <Route
     path="/dash"
