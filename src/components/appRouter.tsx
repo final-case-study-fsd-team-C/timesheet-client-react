@@ -10,7 +10,8 @@ import Dashboard from "../pages/dashboardcomponent";
 import New from "../pages/new";
 import { Component } from 'react';
 import ActivityLog from "../pages/activity";
-
+import ProjectEditComponent from "../pages/projecteditcomponent";
+import InfoProjectComponent from "../pages/infoprojectcomponent"
 
 const AppRouter: React.FC = () => {
  
@@ -23,7 +24,9 @@ const AppRouter: React.FC = () => {
   <Route exact path="/register" component={Register}/>     
   <Route path="/dash" component={Dashboard} />
   <Route exact path="/activity" component={ActivityLog} />
-  
+  <Route exact path="/projecteditcomponent" component={ProjectEditComponent} />
+  <Route exact path="/infoprojectcomponent" component={InfoProjectComponent} />
+
   <Route
     path="/dash"
     render={({ match: { url } }) => (
