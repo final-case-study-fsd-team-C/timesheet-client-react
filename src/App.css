@@ -1,13 +1,25 @@
-.grid-container{
+.grid-container {
   grid-column-gap: 50px;
 }
-.phases{
+
+.phases {
   margin-top: 22px;
   margin-left: 60px;
 }
-.search{
+
+.search {
   margin-left: 100px;
 }
-Button.btn{
+
+.dropdown {
+  width: 100px;
+}
+
+Button.btn {
   background-color: rgb(0, 255, 21);
+}
+
+Button.addnew,
+Button.save {
+  background-color: rgb(0, 255, 21)
 }
