@@ -12,6 +12,7 @@ import { Component } from 'react';
 import ActivityLog from "../pages/activity";
 import ProjectEditComponent from "../pages/projecteditcomponent";
 import InfoProjectComponent from "../pages/infoprojectcomponent"
+import Reports from "../pages/Reports";
 
 const AppRouter: React.FC = () => {
  
@@ -26,6 +27,7 @@ const AppRouter: React.FC = () => {
   <Route exact path="/activity" component={ActivityLog} />
   <Route exact path="/projecteditcomponent" component={ProjectEditComponent} />
   <Route exact path="/infoprojectcomponent" component={InfoProjectComponent} />
+  <Route exact path="/reports" component={Reports} />
 
   <Route
     path="/dash"
