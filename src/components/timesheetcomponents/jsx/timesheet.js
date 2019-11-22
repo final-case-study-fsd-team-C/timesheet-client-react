@@ -148,7 +148,7 @@ class Timesheet extends React.Component {
                     <div className="timesheet__overlay-inner">
                       {!scaled && (schedule.request || current || done) && <div className="timesheet__overlay-status">
                         {done
-                          ? 'Done'
+                          ? 'Project'
                           : (current ? 'On-going' : 'Requested')}
                       </div>}
 

@@ -301,7 +301,7 @@ const ProjectComponent: React.FC<IProjectComponentProps> = (
         updatedClient
       );
       deletedProjectId.forEach(value => {
-        projectService.deleteProject(value + "").subscribe(data => {
+        projectService.deleteProject(value).subscribe((data: any) => {
           props.projectData();
           setSelected([]);
           console.log(data);

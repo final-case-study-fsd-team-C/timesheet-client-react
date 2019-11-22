@@ -378,7 +378,6 @@ class CreateProjectModal extends React.Component<
                   >
                     {" "}
                     <optgroup label="">
-                      <option value="new">Add New Member</option>
                       {this.props.project.map((prop, key) => {
                         // console.log(prop);
                         return (

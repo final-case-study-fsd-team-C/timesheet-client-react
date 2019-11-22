@@ -75,6 +75,7 @@ const AppBarComponent: React.FC<IAppBarProps> = (props: IAppBarProps) => {
   const classes = useStyles();
   const [open2, setOpen2] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [loadingTimer, setLoadingTimer] = React.useState(false);
   const open = Boolean(anchorEl);
   const [name, setName] = React.useState(
     sessionStorage.getItem("name") === null
@@ -109,8 +110,10 @@ const AppBarComponent: React.FC<IAppBarProps> = (props: IAppBarProps) => {
   };
 
   React.useEffect(() => {
+    setLoadingTimer(true);
     setTimeout(() => {
       setName(sessionStorage.getItem("name"));
+      setLoadingTimer(false);
     }, 5000);
   }, []);
 
@@ -170,12 +173,12 @@ const AppBarComponent: React.FC<IAppBarProps> = (props: IAppBarProps) => {
         </IconButton>
         {sessionStorage.getItem("name") === null ? (
           <Button color="inherit" onClick={login}>
-            Login
+            {loadingTimer ? "Loading..." : "Login"}
           </Button>
         ) : (
           <div>
             <Button color="inherit" onClick={handleMenu}>
-              {name}
+              {loadingTimer ? "Loading..." : name}
             </Button>
             <Menu
               id="menu-appbar"

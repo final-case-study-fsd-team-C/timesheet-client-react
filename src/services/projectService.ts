@@ -174,10 +174,10 @@ class ProjectService {
     });
   };
 
-  public deletePhases = (id: string): Observable<any> => {
+  public deletePhases = (name: string): Observable<any> => {
     return defer(() => {
       return from<Promise<any>>(
-        fetch(`http://localhost:${this.PORT}/phases/${id}`, {
+        fetch(`http://localhost:${this.PORT}/phases/${name}`, {
           headers: { "Content-Type": "application/json; charset=utf-8" },
           method: "DELETE"
         })
@@ -185,7 +185,7 @@ class ProjectService {
     });
   };
 
-  public deleteProject = (id: string): Observable<any> => {
+  public deleteProject = (id: number): Observable<any> => {
     return defer(() => {
       return from<Promise<any>>(
         fetch(`http://localhost:${this.PORT}/project/${id}`, {
@@ -196,10 +196,10 @@ class ProjectService {
     });
   };
 
-  public deleteClient = (id: string): Observable<any> => {
+  public deleteClient = (name: string): Observable<any> => {
     return defer(() => {
       return from<Promise<any>>(
-        fetch(`http://localhost:${this.PORT}/clients/${id}`, {
+        fetch(`http://localhost:${this.PORT}/clients/${name}`, {
           headers: { "Content-Type": "application/json; charset=utf-8" },
           method: "DELETE"
         })

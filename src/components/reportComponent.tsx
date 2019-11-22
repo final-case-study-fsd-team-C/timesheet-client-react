@@ -60,10 +60,12 @@ const ReportComponent: React.FC<ReportProps> = (props: ReportProps) => {
   // var [timeWorked, setTimeWorked] = React.useState(0);
   const handleClose = () => {
     setOpen(false);
+    setProject(props.project[0].name);
     showProjectCharts(props.project[0].name);
   };
 
   const handleChange = (e: any) => {
+    setProject(e.target.value);
     showProjectCharts(e.target.value);
   };
 

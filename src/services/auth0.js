@@ -9,7 +9,7 @@ class Auth {
             clientID: 'QS5YN5Cxb8HwTdQZ4vusm6n1vMNG5KO2',
             redirectUri: 'http://localhost:3000/dash/dashboard',
             responseType: 'token id_token',
-            scope: 'openid view:registration view:registrations'
+            scope: 'openid profile view:registration view:registrations'
         });
 
         this.getProfile = this.getProfile.bind(this);
@@ -67,7 +67,7 @@ class Auth {
         sessionStorage.setItem('access_token', authResult.accessToken);
         sessionStorage.setItem('id_token', authResult.idToken);
         sessionStorage.setItem('expires_at', expiresAt);
-        sessionStorage.setItem('name', "Mitrasish");
+        sessionStorage.setItem('name', authResult.idTokenPayload.given_name);
         console.log(authResult.accessToken, authResult.idToken, expiresAt, prof)
     }
 
